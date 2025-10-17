@@ -10,9 +10,9 @@ function StatusCards({ sensorData, toggleDoor }) {
   // Effect to show or hide the alert dialog based on flame level
   useEffect(() => {
     // If flame level is dangerously high (greater than 300), show the alert
-    if (flame < 300 && !showAlert) {
+    if (flame < 800 && !showAlert) {
       setShowAlert(true);
-    } else if (flame > 300 && showAlert) {
+    } else if (flame > 800 && showAlert) {
       setShowAlert(false); // Hide alert if flame level is below or equal to threshold
     }
   }, [flame, showAlert]); // Trigger effect on flame level change
